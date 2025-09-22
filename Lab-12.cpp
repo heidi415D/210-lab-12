@@ -19,34 +19,35 @@ int main() {
         return 1;
 }
 
-for (int i = 0 i < DAyS; i++){
+for (int i = 0; i < DAYS; i++){
         inputFile >> steps[i]; // read steps into the array
     }
     inputFile.close(); // close the file
 
     // array member functions 
 
-    // size
+    // size ()
     cout << "Total number of days recorded: " << steps.size() << endl;
 
-    // front and back
+    // front and back ()
     cout << "Steps on the first day: " << steps.front() << endl;
     cout << "Steps on the last day: " << steps.back() << endl;
 
     // at() for day 10
     cout << "Steps on day 10: " << steps.at(9) << endl; // index 9 for day 10
 
-    // print all steps with a for lop - range based 
-    cout << "All steps: " << endl
-    for (int s : steps) {
-        cout << s << " ";
-        cout <<qndl;
+    // print all steps with a for loop
+    for (size_t i = 0; i < steps.size(); i++) {
+        cout << steps[i] << " ";
     }
+    cout << endl;
 
     // sort ascending
     sort(steps.begin(), steps.end());
-    cout < "Sorted ascending: ";
-    for ()
+    cout << "Sorted ascending: ";
+    for (int s : steps) { cout << s << " "; }
+    cout << endl;
+
     // sort descending
     sort(steps.rbegin(), steps.rend());
     cout << "Sorted descending: ";
@@ -55,7 +56,7 @@ for (int i = 0 i < DAyS; i++){
 
     // find max and min
     cout << "Max steps: " << *max_element(steps.begin(), steps.end()) << endl;
-    cout << "Min steps: " << *min_element(steps.begin(), steps.end())
+    cout << "Min steps: " << *min_element(steps.begin(), steps.end()) << endl;
     int total = accumulate(steps.begin(), steps.end(), 0);
     cout << "Total steps in 30 days: " << total << endl;
 
@@ -64,6 +65,13 @@ for (int i = 0 i < DAyS; i++){
     goals4.fill(4000);
     goals5.fill(5000);
     goals4.swap(goals5);
+    cout << "After swap, goals4: ";
+    for (int g : goals4) { cout << g << " "; }
+    cout << endl;
 
+    // showing steps again
+    cout << "Done printing step counts!" << endl;
 
+    return 0;
+}
 
