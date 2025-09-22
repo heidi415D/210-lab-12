@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <array>
-#include <algorithm> // using this library for sort, find etc
+#include <algorithm> // using this library for sort, max & min 
 #include <numeric>
 using namespace std;
 
