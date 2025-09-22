@@ -37,21 +37,26 @@ for (int i = 0; i < DAYS; i++){
     cout << "Steps on day 10: " << steps.at(9) << endl; // index 9 for day 10
 
     // print all steps with a for loop
+    cout << "All steps:" << endl;
+    for (size_t i = 0; i < DAYS; i++) {
+        cout << steps[i] << " ";
+    cout << endl;
+    }
+
+    // sort ascending
+    sort(steps.begin(), steps.end());
+    cout << "Sorted ascending: ";
     for (size_t i = 0; i < steps.size(); i++) {
         cout << steps[i] << " ";
     }
     cout << endl;
 
-    // sort ascending
-    sort(steps.begin(), steps.end());
-    cout << "Sorted ascending: ";
-    for (int s : steps) { cout << s << " "; }
-    cout << endl;
-
     // sort descending
     sort(steps.rbegin(), steps.rend());
     cout << "Sorted descending: ";
-    for (int s : steps) { cout << s << " "; }
+    for (size_t i = 0; i < steps.size(); i++) {
+        cout << steps[i] << " ";
+    }
     cout << endl;
 
     // find max and min
@@ -66,7 +71,9 @@ for (int i = 0; i < DAYS; i++){
     goals5.fill(5000);
     goals4.swap(goals5);
     cout << "After swap, goals4: ";
-    for (int g : goals4) { cout << g << " "; }
+    for (size_t i = 0; i < goals4.size(); i++) {
+        cout << goals4[i] << " ";
+    }
     cout << endl;
 
     // showing steps again
