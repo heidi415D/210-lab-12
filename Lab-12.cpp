@@ -36,5 +36,15 @@ for (int i = 0 i < DAyS; i++){
     // at() for day 10
     cout << "Steps on day 10: " << steps.at(9) << endl; // index 9 for day 10
 
-    // print all steps with a for lop - range based
-    
+    // print all steps with a for lop - range based 
+    cout << "All steps: " << endl
+    for (int s : steps) {
+        cout << s << " ";
+        cout <<qndl;
+    }
+
+    // sort ascending
+    sort(steps.begin(), steps.end());
+    cout < "Sorted ascending: ";
+    for ()
+
