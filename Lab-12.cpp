@@ -47,4 +47,23 @@ for (int i = 0 i < DAyS; i++){
     sort(steps.begin(), steps.end());
     cout < "Sorted ascending: ";
     for ()
+    // sort descending
+    sort(steps.rbegin(), steps.rend());
+    cout << "Sorted descending: ";
+    for (int s : steps) { cout << s << " "; }
+    cout << endl;
+
+    // find max and min
+    cout << "Max steps: " << *max_element(steps.begin(), steps.end()) << endl;
+    cout << "Min steps: " << *min_element(steps.begin(), steps.end())
+    int total = accumulate(steps.begin(), steps.end(), 0);
+    cout << "Total steps in 30 days: " << total << endl;
+
+    // fill and swap the small arrays
+    array<int, 4> goals4, goals5;
+    goals4.fill(4000);
+    goals5.fill(5000);
+    goals4.swap(goals5);
+
+
 
